@@ -6,7 +6,7 @@ folder_path = os.path.dirname(__file__)
 print("プログラムファイルのディレクトリパス:", folder_path)
 
 # os.sepとは"\"のこと。ここにpdfに変換したいファイル名を入れる
-word_file_path = folder_path + os.sep + r"Hello_world.docx"
+word_file_path = word_file_path = folder_path + os.sep + ".." + os.sep + "assets" + os.sep + "Hello_world.docx"
 print("Wordファイルパス:", word_file_path)
 
 # wordの起動

@@ -4,7 +4,7 @@ import os
 folder_path = os.path.dirname(__file__)
 print("プログラムファイルのディレクトリパス：", folder_path)
 
-input_file_path = folder_path + os.sep + "HelloPDF.pdf"
+input_file_path = folder_path + os.sep + ".." + os.sep + "assets" + os.sep + "HelloPDF.pdf"
 print("Wordファイルのパス：", input_file_path)
 
 app = com.Dispatch("Word.Application")

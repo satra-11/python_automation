@@ -1,10 +1,10 @@
 import win32com.client as com
 import os
-
+import sys
 folder_path = os.path.dirname(__file__)
 print("プログラムファイルのディレクトリパス：", folder_path)
 
-word_file_path = folder_path + os.sep + "Hello_world.docx"
+word_file_path = folder_path + os.sep + ".." + os.sep + "assets" + os.sep + "Hello_world.docx"
 print("Wordファイルのパス：", word_file_path)
 
 pdf_file_path = folder_path + os.sep + "Word_サンプル.pdf"
@@ -42,7 +42,7 @@ app.Selection.Find.Execute(
 )
 
 # 画像ファイルの挿入
-image_file_path = folder_path + os.sep + "sample.jpg"
+image_file_path = folder_path + os.sep + ".." + os.sep + "assets" + os.sep + "sample.jpg"
 
 # 検索して画像に置き換える文字列。
 app.Selection.Find.Execute("This")
