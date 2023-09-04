@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+# Tips
 # webdrivermanagerを入れた方が良い。ブラウザは頻繁に更新されるため
 # seleniumIDEでブラウザ操作を記録できるのでお勧め
 
