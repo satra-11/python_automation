@@ -2,10 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+# webdrivermanagerを入れた方が良い。ブラウザは頻繁に更新されるため
+# seleniumIDEでブラウザ操作を記録できるのでお勧め
+
 # ファイルのダウンロード用にChromeオプションを設定
 chrome_options = webdriver.ChromeOptions()
 prefs = {
-    "download.default_directory": r"C:\Users\syuzu\PycharmProjects\pythonProject\automation\assets",
+    #webdriverの場所を指定。pythonを複数バージョン動かす場合によい
+    "download.default_directory": r"C:\Users\syuzu\desktopdriver\chromedriver.exe",
     "download.prompt_for_download": False,
     "download.directory_upgrade": True,
     "plugins.always_open_pdf_externally": True
@@ -28,3 +32,5 @@ time.sleep(5)
 
 # 処理が完了したらWebDriverを閉じる
 driver.quit()
+
+
