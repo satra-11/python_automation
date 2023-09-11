@@ -41,16 +41,16 @@ sheet = wb.Worksheets("Sheet1")
 for y in range(5, 13):
     print(y)
 
-    price = sheet.Cells(y, 3).Value
-    quantity = sheet.Cells(y, 4).Value
+    # 完了の有無で判断する。
+    value_x = sheet.Cells(y, 6).Value
+    if value_x != "完了":
+        price = sheet.Cells(y, 3).Value
+        quantity = sheet.Cells(y, 4).Value
 
-    print(price, type(price))
-    print(quantity, type(quantity))
+        sales_amount = keisan(value_1=price, value_2=quantity)
 
-    sales_amount = keisan(value_1=price, value_2=quantity)
+        sheet.Cells(y, 5).Value = sales_amount
+        sheet.Cells(y, 6).Value = "追加作業により完了"
 
-    sheet.Cells(y, 5).Value = sales_amount
-    sheet.Cells(y, 6).Value = "完了"
-
-    python_excel_time = time_record()
-    sheet.Cells(y, 7).Value = python_excel_time
+        python_excel_time = time_record()
+        sheet.Cells(y, 7).Value = python_excel_time
